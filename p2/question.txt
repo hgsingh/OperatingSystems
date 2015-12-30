@@ -1,0 +1,4 @@
+Harsukh Singh
+Question for project 2 cs 333
+
+Hoare semantics is different from Mesa semantics in that the the block thread is always awakened to compete against the other threads for the lock.  Where as the Hoare Semantics uses the signaling thread and puts it in wait. 

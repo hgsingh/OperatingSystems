@@ -1,0 +1,388 @@
+Script started on October  3, 2015 01:48:23 PM PDT
+sh-3.2$ asm Hello.s
+sh-3.2$ lddd h Hello.o -o Hl ello
+sh-3.2$ blitz -g Hello
+Beginning execution...
+Hello, world!
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+000080: A1FFFFB8       jmp     0xFFFFB8         ! targetAddr = main
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 1705
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 1705
+sh-3.2$ asm Echo.s 
+sh-3.2$ lddd Echo.s -o Echo. 
+BLITZ Linker Error: Problem with file "Echo.s"; File is not a .o file (magic number is incorrect)
+sh-3.2$ lddd Echo.s -o Echos[1P[1@o
+sh-3.2$ blitz Echo
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> g
+Beginning execution...
+Hello
+Hello
+Hello World
+Hello World
+This works
+This works
+q
+q
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+                   cont:
+0000A4: A1FFFFAC       jmp     0xFFFFAC         ! targetAddr = loop
+> 
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 30802165
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 30802165
+sh-3.2$ [Ksh-3.2$ [Ksh-3.2$ [Ksh-3.2$ kpl -unsafe System
+sh-3.2$ asm System.s
+sh-3.2$ kpl HelloWork ld
+sh-3.2$ asm HelloWorld.s
+sh-3.2$ asm r Runtime.s
+sh-3.2$ lddd Runtime.o System.o HelloWorld.o -o HelloWorld
+sh-3.2$ vim HelloWorld  .h 
+7[?47h[?1h=[2;1H½[6n[2;1H  [1;1H]11;?[1;39r[m[H[2J[39;1H"HelloWorld.h" 7L, 63C[>c[1;1Hheader Hello
+  uses System
+
+  functions
+    main ()
+
+endHeader
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[m[39;55H1,1[11CAll[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[39;45H^[[1;1H[39;45H  [1;1H[39;45H:[1;1H[39;1H[K[39;1H:q[39;1H[K[39;1H[?1l>[2J[?47l8sh-3.2$ vim HelloWorld.c
+7[?47h[?1h=[2;1H½[6n[2;1H  [1;1H]11;?[1;39r[m[H[2J[39;1H"HelloWorld.c" 24L, 391C[>c[1;1Hcode Hello
+
+  -- This is the "hello world" program, for use in Project 1.
+
+  function main ()[6;7Hprint ("Hello, world...\n")[7;7H--foo (10)
+    endFunction
+
+  function foo (x: int)[11;7Hbar (x+1)
+    endFunction
+
+  function bar (a: int)
+    var b: int[16;7Hb = a + 1[17;7Hprint ("The value of b is ")[18;7HprintInt (b)[19;7Hnl ()[20;7Hdebug[21;7Hbar (b)
+    endFunction
+
+endCode
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[m[39;55H1,1[11CAll[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[39;45H^[[1;1H[39;45H  [1;1H[39;45H:[1;1H[39;1H[K[39;1H:q[39;1H[K[39;1H[?1l>[2J[?47l8sh-3.2$ blitz -g HelloWol rld
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Hello, world...
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+000D98: C0100000       sethi   0x0000,r1        ! 0x00000DA8 = 3496 (noGoMessage)
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 945
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 945
+sh-3.2$ kpl HelloWorld
+sh-3.2$ vim h HelloWorld.c 
+7[?47h[?1h=[2;1H½[6n[2;1H  [1;1H]11;?[1;39r[m[H[2J[39;1H"HelloWorld.c" 24L, 391C[>c[1;1Hcode Hello
+
+  -- This is the "hello world" program, for use in Project 1.
+
+  function main ()[6;7Hprint ("Hello, world...\n")[7;7H--foo (10)
+    endFunction
+
+  function foo (x: int)[11;7Hbar (x+1)
+    endFunction
+
+  function bar (a: int)
+    var b: int[16;7Hb = a + 1[17;7Hprint ("The value of b is ")[18;7HprintInt (b)[19;7Hnl ()[20;7Hdebug[21;7Hbar (b)
+    endFunction
+
+endCode
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[m[39;55H1,1[11CAll[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[39;45H~@k[1;1H[39;45H   [2;1H[39;55H2,0-1[2;1H[39;45H~@k[2;1H[39;45H   [3;1H[39;55H3,1  [3;1H[39;45H~@k[3;1H[39;45H   [4;1H[39;55H4,0-1[4;1H[39;45H~@k[4;1H[39;45H   [5;1H[39;55H5,1  [5;1H[39;45H~@k[5;1H[39;45H   [6;1H[39;55H6[6;1H[39;45H~@k[6;1H[39;45H   [6;2H[39;57H2[6;2H[39;45H~@k[6;2H[39;45H   [6;3H[39;57H3[6;3H[39;45H~@k[6;3H[39;45H   [6;4H[39;57H4[6;4H[39;45H~@k[6;4H[39;45H   [7;4H[39;55H7[7;4H[39;45H~@k[7;4H[39;45H   [7;5H[39;57H5[7;5H[39;45H~@k[7;5H[39;45H   [7;6H[39;57H6[7;6H[39;45H~@k[7;6H[39;45H   [7;7H[39;57H7[7;7H[39;45H~@k[7;7H[39;45H   [7;8H[39;57H8[7;8H[39;45H~@k[7;8H[39;45H   [7;9H[39;57H9[7;9H[39;45H~@k[7;9H[39;45H   [7;10H[39;57H10[7;10H[39;45H~@k[7;10H[39;45H   [7;9H[39;57H9 [7;9H[39;45Hi[7;9H[39;45H [7;9H[39;1H[1m-- INSERT --[m[39;13H[K[39;55H7,9[11CAll[7;9Hfoo (10)[7;16H[K[39;57H8[7;8Hfoo (10)[7;15H[K[39;57H7[7;7H[39;1H[K[7;6H[39;45H^[[7;6H[39;45H  [7;7H[39;55H7,6[11CAll[7;6H[39;45H:[7;6H[39;45H[K[39;1H:q[39;2H[K[39;2Hw"HelloWorld.c" 24L, 389C written[7;6H[39;55H7,6[11CAll[39;55H[K[39;55H7,6[11CAll[7;6H[39;45H^[[7;6H[39;45H  [7;6H[39;45H:[7;6H[39;1H[K[39;1H:wq"HelloWorld.c" 24L, 389C written
+[?1l>[2J[?47l8sh-3.2$ blitz -g HelloWorld                   kpl Hellow World
+sh-3.2$ kpl HelloWorldsh-3.2$ vim HelloWorld.c sh-3.2$ [3Pkpl HelloWorldsh-3.2$ [5@blitz -g HelloWorldsh-3.2$ [3Pvim HelloWorld.ch sh-3.2$ lddd Runtime.o System.o HelloWorld.o -o HelloWorld
+sh-3.2$ blitz -g HelloWorld
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Hello, world...
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+000D98: C0100000       sethi   0x0000,r1        ! 0x00000DA8 = 3496 (noGoMessage)
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> g
+Beginning execution...
+
+The KPL program has terminated; you may not continue!
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+000D98: C0100000       sethi   0x0000,r1        ! 0x00000DA8 = 3496 (noGoMessage)
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 1296
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 1296
+sh-3.2$ asm HelloWorld.s 
+sh-3.2$ asm HelloWorld.s sh-3.2$ blitz -g HelloWorldsh-3.2$ [31@lddd Runtime.o System.o HelloWorld.o -o HelloWorldsh-3.2$ kpl HelloWorld[Ksh-3.2$ vim HelloWorld.c sh-3.2$ [3Pkpl HelloWorldsh-3.2$ [5@blitz -g HelloWorldsh-3.2$ [3Pvim HelloWorld.csh-3.2$ blitz -g HelloWorldsh-3.2$ [5Pkpl HelloWorldsh-3.2$ vim HelloWorld.c sh-3.2$ [3Pkpl HelloWorldsh-3.2$ [36@lddd Runtime.o System.o HelloWorld.o -o HelloWorldsh-3.2$ kpl HelloWorld[Ksh-3.2$ vim HelloWorld.c sh-3.2$ [3Pkpl HelloWorld              vim Mak   makefile 
+7[?47h[?1h=[2;1H½[6n[2;1H  [1;1H]11;?[1;39r[m[H[2J[39;1H"makefile" 37L, 668C[>c[1;1H#
+# Type 'make' with this 'makefile' file to build the example BLITZ progrr[3;1Hams.
+# It will execute the following commands as needed, based on files'
+# most-recent-update times.
+#
+
+all: Echo Hello HelloWorld
+
+Echo.o: Echo.s[11;9Hasm Echo.s
+
+Echo: Echo.o[14;9Hlddd Echo.o -o Echo
+
+Hello.o: Hello.s[17;9Hasm Hello.s
+
+Hello: Hello.o[20;9Hlddd Hello.o -o Hello
+
+Runtime.o: Runtime.s[23;9Hasm Runtime.s
+
+System.s: System.h System.c[26;9Hkpl System -unsafe
+
+System.o: System.s[29;9Hasm System.s
+
+HelloWorld.s: HelloWorld.h HelloWorld.c System.h[32;9Hkpl HelloWorld
+
+HelloWorld.o: HelloWorld.s[35;9Hasm HelloWorld.s
+
+HelloWorld: Runtime.o System.o HelloWorld.o[38;9Hlddd Runtime.o System.o HelloWorld.o -o HelloWorld[39;55H1,1[11CAll[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[39;45H~@k[1;1H[39;45H   [2;1H[39;55H2[2;1H[39;45H~@k[2;1H[39;45H   [4;1H[39;55H3[4;1H[39;45H~@k[4;1H[39;45H   [5;1H[39;55H4[5;1H[39;45H~@k[5;1H[39;45H   [6;1H[39;55H5[6;1H[39;45H~@k[6;1H[39;45H   [7;1H[39;55H6,0-1[7;1H[39;45H~@k[7;1H[39;45H   [8;1H[39;55H7,1  [8;1H[39;45H~@k[8;1H[39;45H   [9;1H[39;55H8,0-1[9;1H[39;45H~@k[9;1H[39;45H   [10;1H[39;55H9,1  [10;1H[39;45H~@k[10;1H[39;45H   [11;8H[39;55H10,1-8[11;8H[39;45H~@k[11;8H[39;45H   [12;1H[39;56H1,0-1[12;1H[39;45H~@k[12;1H[39;45H   [13;1H[39;56H2,1  [13;1H[39;45H~@k[13;1H[39;45H   [14;8H[39;56H3,1-8[14;8H[39;45H~@k[14;8H[39;45H   [15;1H[39;56H4,0-1[15;1H[39;45H~@k[15;1H[39;45H   [16;1H[39;56H5,1  [16;1H[39;45H~@k[16;1H[39;45H   [17;8H[39;56H6,1-8[17;8H[39;45H~@k[17;8H[39;45H   [18;1H[39;56H7,0-1[18;1H[39;45H~@k[18;1H[39;45H   [19;1H[39;56H8,1  [19;1H[39;45H~@k[19;1H[39;45H   [20;8H[39;56H9,1-8[20;8H[39;45H~@k[20;8H[39;45H   [21;1H[39;55H20,0-1[21;1H[39;45H~@k[21;1H[39;45H   [22;1H[39;56H1,1  [22;1H[39;45H~@k[22;1H[39;45H   [23;8H[39;56H2,1-8[23;8H[39;45H~@k[23;8H[39;45H   [24;1H[39;56H3,0-1[24;1H[39;45H~@k[24;1H[39;45H   [25;1H[39;56H4,1  [25;1H[39;45H~@k[25;1H[39;45H   [26;8H[39;56H5,1-8[26;8H[39;45H~@k[26;8H[39;45H   [27;1H[39;56H6,0-1[27;1H[39;45H~@k[27;1H[39;45H   [28;1H[39;56H7,1  [28;1H[39;45H~@k[28;1H[39;45H   [29;8H[39;56H8,1-8[29;8H[39;45H~@k[29;8H[39;45H   [30;1H[39;56H9,0-1[30;1H[39;45H~@k[30;1H[39;45H   [31;1H[39;55H30,1  [31;1H[39;56H1,1-8[32;8H[39;45H~@k[32;8H[39;45H   [33;1H[39;56H2,0-1[33;1H[39;45H~@k[33;1H[39;45H   [34;1H[39;56H3,1  [34;1H[39;45H~@k[34;1H[39;45H   [35;8H[39;56H4,1-8[35;8H[39;56H5,0-1[36;1H[39;45H~@k[36;1H[39;45H   [37;1H[39;56H6,1  [37;1H[39;45H~@k[37;1H[39;45H   [38;8H[39;56H7,1-8[38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [38;8H[39;45H~@k[38;8H[39;45H   [37;1H[39;56H6,1  [37;1H[39;45H~@k[37;1H[39;45H   [36;1H[39;56H5,0-1[36;1H[39;45H~@k[36;1H[39;45H   [35;8H[39;56H4,1-8[35;8H[39;45H~@k[35;8H[39;45H   [34;1H[39;56H3,1  [34;1H[39;45H~@k[34;1H[39;45H   [33;1H[39;56H2,0-1[33;1H[39;45H~@k[33;1H[39;45H   [32;8H[39;56H1,1-8[32;8H[39;45H~@k[32;8H[39;45H   [31;1H[39;56H0,1  [31;1H[39;45H~@k[31;1H[39;45H   [30;1H[39;55H29,0-1[30;1H[39;45H~@k[30;1H[39;45H   [31;1H[39;55H30,1  [31;1H[39;45H^[[31;1H[39;45H  [31;1H[39;45H:[31;1H[39;1H[K[39;1H:q[39;1H[K[39;1H[?1l>[2J[?47l8sh-3.2$ make makefile 
+`makefile' is up to date.
+sh-3.2$ make
+lddd Runtime.o System.o HelloWorld.o -o HelloWorld
+sh-3.2$ blitz -g HelloWorld
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Hello, world...
+The value of b is 12
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1  ! decimal: -16
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> g
+Beginning execution...
+The value of b is 13
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1  ! decimal: -16
+> st
+   Function/Method            Frame Addr   Execution at...
+   ========================   ==========   =====================
+   bar                         00FFFEAC    HelloWorld.c, line 20
+   bar                         00FFFEC8    HelloWorld.c, line 21
+   foo                         00FFFEE0    HelloWorld.c, line 11
+   main                        00FFFEF8    HelloWorld.c, line 7
+Bottom of activation frame stack!
+> fd r
+=====  Frame number 0 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 20
+Frame Addr:       00FFFEAC
+frameSize:        12
+totalParmSize:    4
+                         ==========
+   sp--> -20   00FFFE98:  0000000D
+         -16   00FFFE9C:  0000000D
+         -12   00FFFEA0:  0000906C
+R.D.ptr:  -8   00FFFEA4:  000028D0
+    r13:  -4   00FFFEA8:  00000015
+     fp:   0   00FFFEAC:  00FFFEC8
+RetAddr:   4   00FFFEB0:  000028B8
+                         ==========
+   Args:   8   00FFFEB4:  0000000C
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFEB4:  0000000C    value = 12
+  _temp_15
+         -12   00FFFEA0:  0000906C
+  b: int
+         -16   00FFFE9C:  0000000D    value = 13
+=================================================
+> up   down
+=====  Frame number 1 (where StackTop = 0)  =====
+Function Name:    bar
+Filename:         HelloWorld.c
+Execution now at: line 21
+Frame Addr:       00FFFEC8
+frameSize:        12
+totalParmSize:    4
+                         ==========
+         -20   00FFFEB4:  0000000C
+         -16   00FFFEB8:  0000000C
+         -12   00FFFEBC:  0000906C
+R.D.ptr:  -8   00FFFEC0:  000028D0
+    r13:  -4   00FFFEC4:  0000000B
+     fp:   0   00FFFEC8:  00FFFEE0
+RetAddr:   4   00FFFECC:  000027B4
+                         ==========
+   Args:   8   00FFFED0:  0000000B
+
+PARAMETERS AND LOCAL VARIABLES WITHIN THIS FRAME:
+=================================================
+  a: int
+           8   00FFFED0:  0000000B    value = 11
+  _temp_15
+         -12   00FFFEBC:  0000906C
+  b: int
+         -16   00FFFEB8:  0000000C    value = 12
+=================================================
+> t
+About to execute FUNCTION CALL                     in bar (HelloWorld.c, line 21)  time = 698
+> g
+Beginning execution...
+The value of b is 14
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+0028A4: 8B1EFFF0       load    [r14+0xFFF0],r1  ! decimal: -16
+> t
+About to execute FUNCTION CALL                     in bar (HelloWorld.c, line 21)  time = 783
+> st
+   Function/Method            Frame Addr   Execution at...
+   ========================   ==========   =====================
+   bar                         00FFFE90    HelloWorld.c, line 21
+   bar                         00FFFEAC    HelloWorld.c, line 21
+   bar                         00FFFEC8    HelloWorld.c, line 21
+   foo                         00FFFEE0    HelloWorld.c, line 11
+   main                        00FFFEF8    HelloWorld.c, line 7
+Bottom of activation frame stack!
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 783
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 783
+sh-3.2$ exit
+exit
+
+script done on October  3, 2015 02:59:06 PM PDT
